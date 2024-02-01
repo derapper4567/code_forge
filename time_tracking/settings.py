@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "Africa/Dar es salaam"
+TIME_ZONE = "Africa/Dar_es_salaam"
 
 USE_I18N = True
 

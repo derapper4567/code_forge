@@ -2,7 +2,7 @@ from django.db import models
 
 class Project(models.Model):
     name = models.CharField(max_length=100)
-    max_allowed = models.positiveIntergerField(0)
+    max_allowed = models.PositiveIntegerField(0)
 
 class Task(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)

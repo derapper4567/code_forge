@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Project, Task, TimeEntry
 from .forms import ProjectForm, TaskForm, TimeEntryForm
 
-def project_create(request):
+def project(request):
     if request.method == 'POST':
         form = ProjectForm(request.POST)
         if form.is_valid():
@@ -12,7 +12,7 @@ def project_create(request):
         form = ProjectForm()
     return render(request, 'project.html', {'form': form})
 
-def task_create(request):
+def task(request):
     if request.method == 'POST':
         form = TaskForm(request.POST)
         if form.is_valid():
@@ -22,7 +22,7 @@ def task_create(request):
         form = TaskForm()
     return render(request, 'task.html', {'form': form})
 
-def time_entry_create(request):
+def time_entry(request):
     if request.method == 'POST':
         form = TimeEntryForm(request.POST)
         if form.is_valid():
